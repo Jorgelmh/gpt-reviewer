@@ -8,8 +8,6 @@ on:
 
 jobs:
   code_quality:
-    name: Call linter
     uses: ./.github/worflows/_lint.yml
   test:
-    name: Call unit tests
     uses: ./.github/workflows/_test.yml

@@ -7,9 +7,8 @@ on:
 
 jobs:
   lint_test:
-    name: Call Lint and Tests
     uses: ./.github/workflows/pr_to_main.yml
+    
   release:
-    name: Call Deployment
     needs: lint_test
     uses: ./.github/workflows/_deploy.yml
