@@ -1,4 +1,4 @@
-name: "Unit testing (CI)"
+name: Unit testing (CI)
 
 on:
   workflow-call:

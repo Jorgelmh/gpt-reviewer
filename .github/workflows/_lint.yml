@@ -1,4 +1,4 @@
-name: "Lint & Formatting (CI)"
+name: Lint & Formatting (CI)
 
 on:
   workflow_call:
