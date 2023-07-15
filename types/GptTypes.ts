@@ -1,4 +1,4 @@
 export interface GptResponse {
-  message: string,
+  message: string
   ok: boolean
 }
