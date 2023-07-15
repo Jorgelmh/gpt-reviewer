@@ -12,3 +12,6 @@ jobs:
   release:
     needs: lint_test
     uses: ./.github/workflows/_deploy.yml
+    permissions:
+      id-token: write # Needed for auth with Deno Deploy
+      contents: read # Needed to clone the repository
