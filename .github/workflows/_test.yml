@@ -5,13 +5,15 @@ on:
 
 jobs:
   test:
-    - name: Checkout
-      uses: actions/checkout@v2
-      
-    - name: Setup Deno 1.35
-      uses: denoland/setup-deno@v1
-      with:
-        deno-version: v1.35
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Setup Deno 1.35
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.35
 
-    - name: Run tests
-      run: deno test tests/
+      - name: Run tests
+        run: deno test tests/

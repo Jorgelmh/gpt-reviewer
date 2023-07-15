@@ -8,6 +8,6 @@ on:
 
 jobs:
   code_quality:
-    uses: "./.github/worflows/_lint.yml"
+    uses: ./.github/worflows/_lint.yml
   test:
-    uses: "./.github/workflows/_test.yml"
+    uses: ./.github/workflows/_test.yml 
