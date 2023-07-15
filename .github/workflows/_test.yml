@@ -1,7 +1,7 @@
 name: Unit testing (CI)
 
 on:
-  workflow-call:
+  workflow_call:
 
 jobs:
   test:
