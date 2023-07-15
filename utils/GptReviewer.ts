@@ -1,6 +1,6 @@
-import { ChatGPTAPI, SendMessageOptions } from "$chatgpt"
-import { MODEL, OPEN_AI_KEY, TEMPERATURE } from "../config/config.ts"
-import { GptResponse } from "../types/GptTypes.ts"
+import { ChatGPTAPI, SendMessageOptions } from '$chatgpt'
+import { MODEL, OPEN_AI_KEY, TEMPERATURE } from '../config/config.ts'
+import { GptResponse } from '../types/GptTypes.ts'
 
 export default class GptReviewer {
   private chatGpt: ChatGPTAPI
@@ -10,7 +10,7 @@ export default class GptReviewer {
     this.chatGpt = new ChatGPTAPI({
       apiKey: OPEN_AI_KEY,
       completionParams: {
-        model: MODEL || "gpt-4",
+        model: MODEL || 'gpt-4',
         temperature: Number(TEMPERATURE) || 0.5,
       },
     })
@@ -29,7 +29,7 @@ export default class GptReviewer {
     } catch (_) {
       return {
         ok: true,
-        message: "An error has ocurred.",
+        message: 'An error has ocurred.',
       }
     }
   }

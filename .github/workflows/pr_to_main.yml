@@ -1,0 +1,12 @@
+name: Pull Request to main
+
+on:
+  pull_requests:
+    branches:
+      - main
+
+jobs:
+  code_quality:
+    uses: ./.github/worflows/_lint.yml
+  test:
+    uses: ./.github/workflows/_test.yml
