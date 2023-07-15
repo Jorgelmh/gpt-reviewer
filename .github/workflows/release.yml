@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint_test:
-    uses: ./.github/worflows/pr_to_main.yml
+    uses: ./.github/workflows/pr_to_main.yml
   release:
     needs: link_test
     uses: ./.github/workflows/_deploy.yml
