@@ -1,4 +1,4 @@
-import { assert, assertEquals, assertStringIncludes } from '$std/testing/asserts.ts'
+import { assertEquals, assertStringIncludes } from '$std/testing/asserts.ts'
 import GptReviewer from '../utils/GptReviewer.ts'
 import { separateCodeFromResponse } from '../utils/util.ts'
 
