@@ -40,9 +40,11 @@ export default class GptReviewer {
    * @param code {string} -> Code solution
    * @returns A list of tests in string format (Language agnostic)
    */
+  // deno-lint-ignore require-await
   public generateTests = async (
     code: string,
   ): Promise<string[]> => {
+    return new Promise((resolve) => resolve([code]))
   }
 
   /**
@@ -52,9 +54,11 @@ export default class GptReviewer {
    * @param explanation {string} -> Explanation of the code
    * @returns A list of tests in string format (Language agnostic)
    */
+  // deno-lint-ignore require-await
   public generateReview = async (
     code: string,
     explanation: string,
   ): Promise<string[]> => {
+    return new Promise((resolve) => resolve([code, explanation]))
   }
 }
