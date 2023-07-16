@@ -5,9 +5,6 @@ on:
 
 jobs:
   test:
-    env:
-      OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
-      OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
     runs-on: ubuntu-latest
     
     steps:
@@ -19,11 +16,8 @@ jobs:
         with:
           deno-version: v1.35
 
-      - name: Print
-        run : |
-          echo $OPENAI_KEY
-          echo ${{ secrets.OPENAI_KEY }}
-          echo $OPENAI_MODEL
-
       - name: Run tests
+        env:
+          OPENAI_KEY: "${{ secrets.OPENAI_KEY }}"
+          OPENAI_MODEL: "${{ secrets.OPENAI_MODEL }}"
         run: deno test tests/ --allow-read --allow-env --allow-net
