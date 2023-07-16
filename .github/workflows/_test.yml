@@ -19,5 +19,5 @@ jobs:
       - name: Run tests
         run: deno test tests/ --allow-read --allow-env --allow-net
         env:
-          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
-          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          OPENAI_KEY: '${{ secrets.OPENAI_KEY }}'
+          OPENAI_MODEL: '${{ secrets.OPENAI_MODEL }}'
