@@ -10,4 +10,5 @@ jobs:
   code_quality:
     uses: ./.github/workflows/_lint.yml
   test:
-    uses: ./.github/workflows/_test.yml 
+    uses: ./.github/workflows/_test.yml
+    secrets: inherit 
