@@ -22,6 +22,7 @@ jobs:
       - name: Print
         run : |
           echo $OPENAI_KEY
+          echo ${{ secrets.OPENAI_KEY }}
           echo $OPENAI_MODEL
 
       - name: Run tests
