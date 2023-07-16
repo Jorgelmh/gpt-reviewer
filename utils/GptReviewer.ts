@@ -60,7 +60,8 @@ export default class GptReviewer {
     code: string,
     explanation: string,
   ): Promise<ReviewResponse> => {
-    const prompt = `Below is a piece of code that ${explanation}, please tell me if it accomplishes what
+    const prompt =
+      `Below is a piece of code that ${explanation}, please tell me if it accomplishes what
                     I'm trying to do, flag any bugs and feel free to make suggestions: ${code}`
     const { message } = await this.sendPrompt(prompt)
     const { language, messages } = separateCodeFromResponse(message)
@@ -69,7 +70,7 @@ export default class GptReviewer {
       prompt,
       messages,
       language,
-      conversationId: this.conversationId
+      conversationId: this.conversationId,
     }
   }
 }

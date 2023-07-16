@@ -1,6 +1,6 @@
 export enum MessageSection {
   CODE = 'code',
-  TEXT = 'text'
+  TEXT = 'text',
 }
 
 export interface GptResponse {

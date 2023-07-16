@@ -7,7 +7,7 @@ Deno.test('First test', () => {
 })
 
 Deno.test('Should separate the code and the text messages', () => {
-  const gptMessage = "The code is: ```javascript\n const val = 'hello' \n```"
+  const gptMessage = 'The code is: ```javascript\n const val = \'hello\' \n```'
   const { language, messages } = separateCodeFromResponse(gptMessage)
 
   assertEquals(language, 'javascript')
